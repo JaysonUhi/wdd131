@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonga</title>
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tonga</h1>
+    </header>
+
+    <div class="background-image"></div>
+
+    <main>
+        <div class="container">
+            <section class="info-box">
+                <h2>Data</h2>
+                <ul>
+                    <li>Area: 747 km²</li>
+                    <li>Population: 105,000</li>
+                    <li>Capital: Nuku'alofa</li>
+                    <li>Languages: Tongan, English</li>
+                    <li>Currency: Paʻanga</li>
+                    <li>Time Zone: GMT+13</li>
+                    <li>Calling Code: +676</li>
+                    <li>Internet TLD: .to</li>
+                </ul>
+            </section>
+
+            <section class="weather-box">
+                <h2>
+                    Weather
+                    <img src="images/weather.png" alt="weather icon" class="weather-icon">
+                </h2>
+                <p>Temperature: <span id="temp">27°C</span></p>
+                <p>Conditions: <span id="conditions">Sunny</span></p>
+                <p>Wind: <span id="wind">10 km/h</span></p>
+                <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🤙 Jayson Uhi 🤙 Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+
+</html>
