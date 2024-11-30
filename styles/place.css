@@ -42,10 +42,6 @@ header h1 {
     margin: 0;
 }
 
-.weather-icon {
-    font-size: 2em;
-}
-
 .weather-svg {
     width: 40px;
     height: 40px;
@@ -107,6 +103,24 @@ footer p {
     margin-top: 400px;
 }
 
+.weather-emoticon {
+    display: inline;
+}
+
+@media (min-width: 769px) {
+    .weather-emoticon {
+        display: none;
+    }
+
+    .weather-svg {
+        display: inline;
+    }
+
+    .weather-box h2::before {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         background-image: url('../images/tonga-small.webp');
@@ -126,14 +140,8 @@ footer p {
         margin: 10px auto;
     }
 
-    .weather-icon {
-        display: none;
-    }
-
     .weather-svg {
-        width: 40px;
-        height: 40px;
-        margin-left: 5px;
+        display: none;
     }
 
     header h1 {
@@ -143,5 +151,9 @@ footer p {
     footer {
         font-size: 0.9em;
         padding: 10px;
+    }
+
+    .weather-emoticon {
+        display: inline;
     }
 }
