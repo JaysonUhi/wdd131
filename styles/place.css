@@ -42,9 +42,9 @@ header h1 {
 }
 
 .weather-svg {
-    width: 50px;
-    height: 50px;
-    display: none;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 }
 
 footer {
@@ -94,6 +94,8 @@ footer p {
     background-color: var(--primary-color);
     padding: 10px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .weather-box {
@@ -124,7 +126,9 @@ footer p {
     }
 
     .weather-svg {
-        display: block;
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
     }
 
     header h1 {
