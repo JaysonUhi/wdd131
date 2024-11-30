@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 3 country assignment">
+    <meta name="author" content="Jayson Uhi">
     <title>Tonga</title>
     <link rel="stylesheet" href="styles/place.css">
 </head>
@@ -13,7 +15,12 @@
         <h1>Tonga</h1>
     </header>
 
-    <div class="background-image"></div>
+    <div class="background-image">
+        <picture>
+            <source srcset="images/tonga-small.webp" media="(max-width: 768px)">
+            <source srcset="images/tonga.webp" media="(min-width: 769px)">
+        </picture>
+    </div>
 
     <main>
         <div class="container">
@@ -32,10 +39,7 @@
             </section>
 
             <section class="weather-box">
-                <h2>
-                    Weather
-                    <img src="images/weather.png" alt="weather icon" class="weather-icon">
-                </h2>
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
                 <p>Temperature: <span id="temp">27°C</span></p>
                 <p>Conditions: <span id="conditions">Sunny</span></p>
                 <p>Wind: <span id="wind">10 km/h</span></p>

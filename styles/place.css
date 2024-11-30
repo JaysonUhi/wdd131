@@ -1,8 +1,14 @@
 :root {
     --primary-color: #ff0000;
-    --secondary-color: #FFFFFF;
+    --secondary-color: #ffffff;
     --background-color: rgba(255, 255, 255, 0.8);
     --text-color: #000000;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
@@ -11,9 +17,11 @@ body {
     padding: 0;
     background-image: url('../images/tonga.webp');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -24,19 +32,19 @@ header {
     position: relative;
 }
 
-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background-color: #FFFFFF;
+header h1 {
+    font-size: 4.5em;
+    margin: 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 4.5em;
+.weather-icon {
+    font-size: 2em;
+}
+
+.weather-svg {
+    width: 50px;
+    height: 50px;
+    display: none;
 }
 
 footer {
@@ -44,15 +52,15 @@ footer {
     color: var(--secondary-color);
     text-align: center;
     padding: 15px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 10;
+    font-size: 1em;
+    margin-top: auto;
 }
 
 footer p {
     margin: 5px 0;
-    font-size: 1em;
 }
 
 .container {
@@ -60,43 +68,36 @@ footer p {
     justify-content: space-between;
     align-items: flex-start;
     padding: 150px 10%;
-}
-
-.info-box {
-    width: 15%;
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    flex-grow: 1;
     position: relative;
-    top: -100px;
 }
 
+.info-box,
 .weather-box {
-    width: 15%;
+    width: 45%;
     background-color: var(--background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     position: relative;
-    top: 400px;
+    z-index: 2;
 }
 
 .info-box h2,
 .weather-box h2 {
     color: var(--secondary-color);
     font-size: 2.5em;
-    text-align: left;
-    position: relative;
-    z-index: 1;
     margin: 0 0 10px 0;
+    position: relative;
 }
 
 .info-box h2::before,
 .weather-box h2::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: -30px;
     transform: translateY(-50%);
     width: calc(100% + 20px);
@@ -106,55 +107,39 @@ footer p {
     border-radius: 5px;
 }
 
-.weather-box img.weather-icon {
-    width: 60px;
-    height: 60px;
-    vertical-align: middle;
-    margin-right: 10px;
+.weather-box {
+    margin-top: 400px;
 }
 
 @media (max-width: 768px) {
+    body {
+        background-image: url('../images/tonga-small.webp');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+
     .container {
         flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    header {
         padding: 20px;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    body {
-        background-image: none;
-    }
-
-    .background-image {
-        background-image: url('../images/tonga.webp');
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 200px;
     }
 
     .info-box,
     .weather-box {
         width: 90%;
         margin: 10px auto;
-        top: 0;
     }
 
-    .info-box h2,
-    .weather-box h2 {
-        font-size: 1.8em;
+    .weather-icon {
+        display: none;
     }
 
-    .info-box p,
-    .weather-box p {
-        font-size: 1.1em;
+    .weather-svg {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 2.5em;
     }
 
     footer {
