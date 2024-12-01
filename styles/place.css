@@ -157,3 +157,23 @@ footer p {
         display: inline;
     }
 }
+
+.fallback-image {
+    display: none;
+}
+
+picture img {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    picture img[src="images/tonga-small.webp"] {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    picture img[src="images/tonga.webp"] {
+        display: block;
+    }
+}
