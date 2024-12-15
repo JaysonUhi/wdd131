@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 6 assignment NFC page">
+    <meta name="author" content="Jayson Uhi">
+    <title>NFC Divisions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <body class="nfc-page"></body>
+    <header class="nfc-header">
+        <h1>NFC Divisions</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="afc.html">AFC</a></li>
+            <li><a href="nfc.html">NFC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <section class="conference-section division">
+                <h2>North</h2>
+                <ul id="nfcNorth"></ul>
+            </section>
+            <section class="conference-section division">
+                <h2>South</h2>
+                <ul id="nfcSouth"></ul>
+            </section>
+            <section class="conference-section division">
+                <h2>East</h2>
+                <ul id="nfcEast"></ul>
+            </section>
+            <section class="conference-section division">
+                <h2>West</h2>
+                <ul id="nfcWest"></ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🤙 Jayson Uhi 🤙 Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+    </script>
+</body>
+
+</html>
