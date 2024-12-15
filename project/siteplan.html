@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siteplan assignment">
+    <meta name="author" content="Jayson Uhi">
+    <title>NFL Website Plan</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>NFL Website Plan</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>NFL Teams Website</strong> was chosen because the website focuses on tracking the teams, schedules, and results of both NFC and AFC divisions in the NFL. It aims to provide NFL fans with quick access to essential information.</p>
+        </section>
+        
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The purpose of this site is to deliver NFL fans a streamlined experience to view team information, divisional breakdowns (NFC and AFC), schedules, and game updates.</p>
+        </section>
+        
+        <section>
+            <h2>Scenarios</h2>
+            <ol>
+                <li>What are the teams in the NFC and AFC divisions?</li>
+                <li>What time and date is the next game?</li>
+                <li>Where can I find detailed team stats?</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>Color Schema</h2>
+            <ul>
+                <li><span class="color-swatch primary"></span> <strong>Primary Color:</strong> #013369 (NFL Dark Blue) - Used for the main background and navigation bar.</li>
+                <li><span class="color-swatch secondary"></span> <strong>Secondary Color:</strong> #D50A0A (NFL Red) - Used for buttons, call-to-actions, and important highlights.</li>
+                <li><span class="color-swatch accent"></span> <strong>Accent Color:</strong> #FFFFFF (White) - Used for text, ensuring high contrast against the dark background.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Heading Font:</strong> 'Roboto', sans-serif - Used for all headers and prominent text elements.</li>
+                <li><strong>Body Font:</strong> 'Open Sans', sans-serif - Used for general body text and descriptions.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Wireframe</h2>
+            <h3>Mobile View</h3>
+            <p>A stacked layout with a collapsible menu for navigation between the main page and the AFC/NFC divisions.</p>
+            <h3>Desktop View</h3>
+            <p>A horizontal navigation bar at the top for easy access to `index.html`, `nfc.html`, and `afc.html` pages. Divisional details displayed in a grid layout for better readability.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🤙 Jayson Uhi 🤙 Utah</p>
+        <p id="lastModified"></p>
+      </footer>
+  
+      <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+      </script>
+</body>
+</html>
